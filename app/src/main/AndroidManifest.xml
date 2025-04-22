@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/parkingarea"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/parkingarea"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ParkEaseApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".CreditCard"
+            android:exported="false" />
+        <activity
+            android:name=".BookingConfirmation"
+            android:exported="false" />
+        <activity
+            android:name=".QrUpiPayment"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SeatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParkingDetailsActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDSWFMWSGkZ0TzT44K4nk1WF_qA1dOWJEQ" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- Replace with your actual API key -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".firebasee.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firebasee.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

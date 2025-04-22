@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "129669358296",
+    "project_id": "parkeaseapp-e30e7",
+    "storage_bucket": "parkeaseapp-e30e7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129669358296:android:7f45a2dbb57367dc6fadad",
+        "android_client_info": {
+          "package_name": "com.example.parkeaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129669358296-hep90gn3mpa0si4279u8po8hn8c0ja4q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.parkeaseapp",
+            "certificate_hash": "e8a40ebc90ff71e3a4c9292148b67b73d4f930d0"
+          }
+        },
+        {
+          "client_id": "129669358296-t450boqo03hrihtpcat0nkcdd91ml64k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZvArZ1Pq8ovdb_m9zNflpLX6DjTRwv_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129669358296-t450boqo03hrihtpcat0nkcdd91ml64k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129669358296:android:630bfbedaa7440496fadad",
+        "android_client_info": {
+          "package_name": "com.parkease.parkeaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129669358296-t450boqo03hrihtpcat0nkcdd91ml64k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZvArZ1Pq8ovdb_m9zNflpLX6DjTRwv_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129669358296-t450boqo03hrihtpcat0nkcdd91ml64k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

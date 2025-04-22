@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ParkEaseApp</string>
+
+    <string name="ParkEase">Online Booking</string>
+    <string-array name="payment_methods">
+        <item>Credit Card</item>
+        <item>Debit Card</item>
+        <item>PayPal</item>
+    </string-array>
+
+
+</resources>
