@@ -13,7 +13,7 @@
 ## 🛠️ Tech Used
 
 - **Programming Language**: Kotlin, XML
-- **Backend**: Firebase (for Authentication and Database)
+- **Backend**: Firebase (for Authentication)
 - **Map Integration**: Google Maps
 - **Libraries**: Glide (image loading), Firebase SDK
 
