@@ -17,6 +17,8 @@ import android.content.Intent
 import android.text.TextWatcher
 import android.text.Editable
 import android.view.inputmethod.EditorInfo
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import com.google.android.gms.maps.model.MapStyleOptions
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -93,33 +95,31 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun setupSearch() {
-        // Setup suggestions
-        val suggestions = arrayOf("parking near me", "parking in jalandhar", "parking in phagwara")
+        val searchOptions = listOf(
+            "parking near me",
+            "parking in jalandhar",
+            "parking in phagwara"
+        )
 
-        searchEditText.setOnEditorActionListener { textView, actionId, _ ->
-            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                performSearch(textView.text.toString())
-                return@setOnEditorActionListener true
-            }
-            false
+        val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, searchOptions)
+        val autoCompleteTextView = searchEditText as AutoCompleteTextView
+        autoCompleteTextView.setAdapter(adapter)
+
+        autoCompleteTextView.setOnItemClickListener { parent, view, position, id ->
+            val selected = parent.getItemAtPosition(position).toString()
+            performSearch(selected)
         }
 
-        // Auto suggestions implementation would go here (would need custom adapter)
+        // Prevent manual typing and enforce selection only
+        autoCompleteTextView.setOnClickListener {
+            autoCompleteTextView.showDropDown()
+        }
 
-        // For simplicity, we'll add a TextWatcher to handle input changes
-        searchEditText.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-            override fun afterTextChanged(s: Editable?) {
-                val query = s.toString().lowercase()
-                if (query == "parking near me" ||
-                    query == "parking in jalandhar" ||
-                    query == "parking in phagwara") {
-                    performSearch(query)
-                }
-            }
-        })
+        autoCompleteTextView.setOnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) autoCompleteTextView.showDropDown()
+        }
     }
+
 
     private fun performSearch(query: String) {
         when (query.lowercase()) {

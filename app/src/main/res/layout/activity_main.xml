@@ -30,16 +30,18 @@
                 android:src="@drawable/baseline_search_24"
                 android:contentDescription="Search Icon" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/searchEditText"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:hint="Search parking..."
-                android:inputType="text"
-                android:padding="8dp"
-                android:textSize="16sp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search parking location"
+                android:inputType="none"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:dropDownHeight="wrap_content"
+                android:completionThreshold="1"
+                />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.parkeaseapp",
+  "applicationId": "com.parkease.parkeaseapp",
   "variantName": "release",
   "elements": [
     {

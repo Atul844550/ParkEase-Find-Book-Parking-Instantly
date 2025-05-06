@@ -92,7 +92,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun signInGoogle() {
-        // Sign out the previous Google account to force account chooser
+
         googleSignInClient.signOut().addOnCompleteListener {
             val signInIntent: Intent = googleSignInClient.signInIntent
             signInLauncher.launch(signInIntent)
@@ -132,19 +132,5 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
-    /*
-    override fun onStart() {
-        super.onStart()
-        if (GoogleSignIn.getLastSignedInAccount(this) != null) {
-            startActivity(
-                Intent(
-                    this, MainActivity
-                    ::class.java
-                )
-            )
-            finish()
-        }
-    }
 
- */
 }
